@@ -21,12 +21,12 @@
                     <td>
                         <!-- first name -->
                         <label for="firstname">First Name: </label>
-                        <input type="text" name="firstname" id="firstname" required maxlength="20"> <br>
+                        <input type="text" name="firstname" id="firstname" required maxlength="20" pattern="[a-zA-z]{1,20}" title="Maximum of 20 characters is allowed"> <br>
                     </td>
                     <td>
                         <!-- Guardian's name -->
                         <label for="guardianname">Father/Guardian Name:</label>
-                        <input type="text" name="guardianname" id="guardianname" required> <br>
+                        <input type="text" name="guardianname" id="guardianname" required pattern="[a-zA-z]{1,20}" title="Maximum of 20 characters is allowed"> <br>
                     </td>
                 </tr>
                 <!-- second row -->
@@ -51,16 +51,16 @@
                         <!-- Age As On -->
                          <p>Age As On:</p>
                         <label for="ageasonyears"></label>
-                        <input type="text" name="ageasonyears" id="ageasonyears" required size="1" maxlength="2"> <p>years</p>
+                        <input type="text" name="ageasonyears" id="ageasonyears" required size="1" maxlength="2" pattern="[0-9]{1,2}"> <p>years</p>
                         <label for="ageasonmonths"></label>
-                        <input type="text" name="ageasonmonths" id="ageasonmonths" required size="1" maxlength="2"> <p>months</p>
+                        <input type="text" name="ageasonmonths" id="ageasonmonths" required size="1" maxlength="2" pattern="[0-9]{1,2}"> <p>months</p>
                         <label for="ageasondays"></label>
-                        <input type="text" name="ageasondays" id="ageasondays" required size="1" maxlength="3"> <p>days</p>
+                        <input type="text" name="ageasondays" id="ageasondays" required size="1" maxlength="3" pattern="[0-9]{1,2}"> <p>days</p>
                     </td>
                     <td>
                         <!-- Aadhar No -->
                         <label for="aadharnumber">Aadhar Number:</label>
-                        <input type="text" name="aadharnumber" id="aadharnumber" required maxlength="12"> <br>
+                        <input type="text" name="aadharnumber" id="aadharnumber" required maxlength="12" pattern="[0-9]{12}" title="Aadhar should be of length 12 digits"> <br>
                     </td>
                 </tr>
                 <!-- fourth row -->
@@ -68,7 +68,7 @@
                     <td>
                         <!-- mobile number -->
                         <label for="mobilenumber">Mobile Number:</label>
-                        <input type="text" name="mobilenumber" id="mobilenumber" required maxlength="10"> <br>
+                        <input type="text" name="mobilenumber" id="mobilenumber" required maxlength="10" pattern="[0-9]{10}" title="Mobile number should be 10 digits"> <br>
                     </td>
                     <td>
                         <!-- email id -->
@@ -81,7 +81,7 @@
                     <td>
                         <!-- photo -->
                         <label for="photo">Photo:</label>
-                        <input type="file" name="photo" id="photo" required> <br> 
+                        <input type="file" name="photo" id="photo" required accept=".jpg,.jpeg,.png"> <br> 
                     </td>
                 </tr>
                 
@@ -105,6 +105,7 @@
                         <!-- District -->
                         <label for="district">District:</label>
                         <select name="district" id="district" required>
+                            <option disabled>Select</option>
                             <option value="abc">ABC</option>
                             <option value="def">DEF</option>
                             <option value="ghi">GHI</option>
@@ -117,6 +118,7 @@
                         <!-- mandal -->
                         <label for="mandal">Mandal:</label>
                         <select name="mandal" id="mandal" required>
+                            <option disabled>Select</option>
                             <option value="abc">ABC</option>
                             <option value="def">DEF</option>
                             <option value="ghi">GHI</option>
@@ -126,6 +128,7 @@
                         <!-- village -->
                         <label for="village">Village:</label>
                         <select name="village" id="village" required>
+                            <option disabled>Select</option>
                             <option value="abc">ABC</option>
                             <option value="def">DEF</option>
                             <option value="ghi">GHI</option>
@@ -137,7 +140,7 @@
                     <td>
                         <!-- pincode -->
                         <label for="pincode">Pin Code:</label>
-                        <input type="text" name="pincode" id="pincode" required maxlength="6"> <br>
+                        <input type="text" name="pincode" id="pincode" required maxlength="6" pattern="[0-9]{6}" title="Pincode should be 6 digits in length"> <br>
                     </td>
                 </tr>
             </table> 
@@ -149,6 +152,7 @@
             <!-- city -->
             <label for="city">City:</label>
             <select name="city" id="city" required>
+                <option disabled>Select</option>
                 <option value="abc">ABC</option>
                 <option value="def">DEF</option>
                 <option value="ghi">GHI</option>
@@ -157,6 +161,7 @@
             <!-- pass type -->
             <label for="passtype">Pass Type:</label>
             <select name="passtype" id="passtype" required>
+                <option disabled>Select</option>
                 <option value="type1">Type1</option>
                 <option value="type2">Type2</option>
                 <option value="type3">Type3</option>
@@ -170,6 +175,7 @@
             <!-- payment mode -->
             <label for="paymentmode">Payment Mode:</label>
             <select name="paymentmode" id="paymentmode" required>
+                <option disabled>Select</option>
                 <option value="cash">Cash</option>
                 <option value="card">Card</option>
                 <option value="upi">UPI</option>
@@ -178,6 +184,7 @@
             <!-- pass delivery mode -->
             <label for="deliverymode">Pass Delivery Mode:</label>
             <select name="deliverymode" id="deliverymode" required>
+                <option disabled>Select</option>
                 <option value="inperson">In Person</option>
                 <option value="post">Post</option>
             </select> <br>
@@ -185,6 +192,7 @@
              <!-- pass collection center -->
              <label for="collectioncenter">Pass Collection Center:</label>
              <select name="collectioncenter" id="collectioncenter" required>
+                <option disabled>Select</option>
                 <option value="abc">ABC</option>
                 <option value="def">DEF</option>
                 <option value="ghi">GHI</option>
